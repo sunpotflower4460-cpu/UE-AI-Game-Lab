@@ -1,0 +1,32 @@
+# Unreal Engine
+Binaries/
+DerivedDataCache/
+Intermediate/
+Saved/
+.vs/
+.vscode/
+*.VC.db
+*.opensdf
+*.sdf
+*.suo
+*.xcodeproj
+*.xcworkspace
+
+# Build/package outputs
+Builds/
+dist/
+out/
+
+# OS
+.DS_Store
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Local MCP/client state that may contain machine-specific paths
+.mcp.local.json
+
+# Higgsfield temporary downloads
+tools/higgsfield/tmp/
