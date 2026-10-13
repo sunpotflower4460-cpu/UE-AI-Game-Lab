@@ -1,4 +1,4 @@
-// Lumi Stack — engine-independent game core. See LumiCore.h.
+// Lumi Stack - engine-independent game core. See LumiCore.h.
 #include "LumiCore.h"
 
 #include <cmath>

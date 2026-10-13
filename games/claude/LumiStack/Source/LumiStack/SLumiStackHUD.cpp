@@ -151,7 +151,7 @@ TSharedRef<SWidget> SLumiStackHUD::BuildPlayingLayer()
 						MakeLabel(Attr<FText>([this]()
 						{
 							const FLumiHudState& S = State();
-							return FText::Format(LOCTEXT("StageFmt", "STAGE {0}/{1}  ·  {2}"),
+							return FText::Format(LOCTEXT("StageFmt", "STAGE {0}/{1}  \u00B7  {2}"),
 								FText::AsNumber(S.StageNumber), FText::AsNumber(S.StageCount), FText::FromString(S.StageName));
 						}), 12, TEXT("Bold"), White, 180, false)
 					]
@@ -388,7 +388,7 @@ TSharedRef<SWidget> SLumiStackHUD::BuildResultLayer()
 					MakeLabel(Attr<FText>([this]()
 					{
 						const FLumiHudState& S = State();
-						return FText::Format(LOCTEXT("FloorFmt", "{0}F  ·  STAGE {1}"), FText::AsNumber(S.Floor), FText::AsNumber(S.StageNumber));
+						return FText::Format(LOCTEXT("FloorFmt", "{0}F  \u00B7  STAGE {1}"), FText::AsNumber(S.Floor), FText::AsNumber(S.StageNumber));
 					}), 11, TEXT("Regular"), InkSoft, 260, false)
 				]
 			]

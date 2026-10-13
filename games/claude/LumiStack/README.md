@@ -83,7 +83,7 @@ UE 5.6 / 5.7 を使う場合は、`LumiStack.uproject` を右クリックして�
 
 ## iPhone 実機 / App Store
 
-1. Project Settings → Platforms → iOS で **Team ID** を設定します（`Config/DefaultEngine.ini` の `IOSTeamID=` でも可）。Bundle ID は `com.sunpotflower.lumistack` です。必要なら自分のものに変更してください。
+1. **署名の Team ID** を設定します。UE 5.4 以降のモダン Xcode ワークフローでは、`Config/DefaultEngine.ini` の `[/Script/MacTargetPlatform.XcodeProjectSettings]` にある `CodeSigningTeam=` を使います（Project Settings → Platforms → Xcode Projects からも設定できます）。Bundle ID は `com.sunpotflower.lumistack` です。必要なら自分のものに変更してください。
 2. パッケージを作成します。
 
 ```bash
@@ -106,4 +106,4 @@ App Store 向けの設定は済ませてあります: 縦画面固定、60fps、
 | ブラウザ版（同一コアの WASM）を headless Chromium で起動 | ✅ タイトル、プレイ、ステージクリア、ゲームオーバーを画面で確認 |
 | UE C++ のコンパイル / PIE / iOS ビルド | ⚠️ **未実施**。制作したクラウド環境（Linux）に UE がないため。`Tools/mac_verify.sh` で Mac 上で確認してください |
 
-UE 側のコードは別のレビューエージェントが API の正しさを机上でチェックしています。それでも、実際のコンパイルは Mac で初めて行うことになります。エラーが出たら、ローカルの Claude Code でログを渡して修正させるのが最短です（`mac_verify.sh` の build.log）。
+UE 側のコードは別のレビューエージェントが UE 5.4/5.5 の API と照合し、机上でチェックしました。コンパイルを止める問題は見つかりませんでした。指摘された軽微な点（PIE ウィンドウ設定の置き場所、デスクトップでカーソルがロックされる件、transient テクスチャ名、非 ASCII 文字、iOS の plist と署名設定）は修正済みです。それでも、実際のコンパイルは Mac で初めて行うことになります。エラーが出たら、ローカルの Claude Code でログを渡して修正させるのが最短です（`mac_verify.sh` の build.log）。

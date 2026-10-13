@@ -33,6 +33,7 @@ This session ran in a Linux cloud container with no Unreal Engine, no macOS and 
 2. **Sanitizer build**: clang's ASan runtime is missing in the container. The script now falls back to the g++ sanitizer build.
 3. **Web HUD**: every HUD layer showed at once because `.layer { display: flex }` overrode the `hidden` attribute. Found in the screenshots; fixed with `[hidden] { display: none !important }` and re-shot.
 4. **Palette / layout polish** from the screenshots: the stage 2 cyan was oversaturated, and the result card stretched to full width.
+6. **Desk review of the UE code** (separate review agent, UE 5.4/5.5 API check): found no compile blockers. Fixed the minor findings: PIE settings moved to `DefaultEditorPerProjectUserSettings.ini`; desktop cursor no longer captured or locked; transient textures get unique names; source files are ASCII only; removed duplicate iOS plist keys; added modern-Xcode signing settings and enabled mobile local lights.
 5. **Autopilot**: changed from tap-on-zero-crossing to tap on the closest frame, so verification runs win reliably at 30fps.
 
 ## Human steps still required

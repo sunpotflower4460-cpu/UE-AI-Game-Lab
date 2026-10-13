@@ -1,4 +1,4 @@
-// Lumi Stack — engine-independent game core.
+// Lumi Stack - engine-independent game core.
 //
 // This file intentionally has no Unreal Engine dependency. The exact same rules are
 // compiled into the UE module, into the native unit tests (CoreTests/) and into the

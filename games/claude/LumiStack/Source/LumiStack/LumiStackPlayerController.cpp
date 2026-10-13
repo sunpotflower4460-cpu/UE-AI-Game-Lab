@@ -18,8 +18,10 @@ void ALumiStackPlayerController::BeginPlay()
 {
 	Super::BeginPlay();
 
-	FInputModeGameOnly InputMode;
-	InputMode.SetConsumeCaptureMouseDown(false);
+	// Keep the desktop cursor visible and unlocked (GameOnly would capture and hide it).
+	FInputModeGameAndUI InputMode;
+	InputMode.SetLockMouseToViewportBehavior(EMouseLockMode::DoNotLock);
+	InputMode.SetHideCursorDuringCapture(false);
 	SetInputMode(InputMode);
 }
 

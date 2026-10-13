@@ -867,7 +867,7 @@ void ALumiStackDirector::BuildBackdrop()
 
 	if (UnlitOpaqueMaterial)
 	{
-		BackdropTexture = UTexture2D::CreateTransient(BackdropTexWidth, BackdropTexHeight, PF_B8G8R8A8, TEXT("LumiBackdrop"));
+		BackdropTexture = UTexture2D::CreateTransient(BackdropTexWidth, BackdropTexHeight, PF_B8G8R8A8, NAME_None);
 		if (BackdropTexture)
 		{
 			BackdropTexture->SRGB = true;
@@ -968,7 +968,7 @@ void ALumiStackDirector::WriteBackdropTexture(const lumi::Rgb& Top, const lumi::
 
 UTexture2D* ALumiStackDirector::CreateRingTexture()
 {
-	UTexture2D* Texture = UTexture2D::CreateTransient(RingTexSize, RingTexSize, PF_B8G8R8A8, TEXT("LumiRing"));
+	UTexture2D* Texture = UTexture2D::CreateTransient(RingTexSize, RingTexSize, PF_B8G8R8A8, NAME_None);
 	if (!Texture)
 	{
 		return nullptr;
