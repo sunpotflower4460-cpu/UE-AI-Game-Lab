@@ -22,6 +22,12 @@ Claude Code / Codex / KUROUD が、Unreal Engine と Higgsfield API を使い、
 
 ゲーム内容は3本で異なって構いません。ただし、合格条件は共通にします。
 
+## 成果物
+
+| Agent | ゲーム | 状態 |
+| --- | --- | --- |
+| Claude Code | [Lumi Stack](games/claude/LumiStack/README.md): ワンタップ積み上げゲーム（UE5 C++、アセットゼロ、iOS 設定済み、ブラウザ版あり） | ゲームコアとブラウザ版は検証済み。UE ビルドは Mac での検証待ち（[run log](results/claude/run-log.md)） |
+
 ## 基本方針
 
 最初から3本を同時に作りません。

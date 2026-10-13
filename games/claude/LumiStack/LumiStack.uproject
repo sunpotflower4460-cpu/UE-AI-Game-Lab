@@ -1,0 +1,24 @@
+{
+	"FileVersion": 3,
+	"EngineAssociation": "5.5",
+	"Category": "",
+	"Description": "Lumi Stack - a one-tap stacking mini-game built entirely from C++ by Claude Code.",
+	"Modules": [
+		{
+			"Name": "LumiStack",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "ProceduralMeshComponent",
+			"Enabled": true
+		}
+	],
+	"TargetPlatforms": [
+		"IOS",
+		"Mac",
+		"Windows"
+	]
+}
